@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+}
+#main{
+    height: auto;
+    width: 60%;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    justify-content: start;
+}
+#searchContainer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: relative;
+    top: 30;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* background-color: red; */
+}
+input{
+    width: 85%;
+    height: 40px;
+   
+    font-size: 20px;
+    
+}
+#btn{
+    width: 80px;
+    position: relative;
+    margin-left: 3px;
+    height: 45px;
+    /* font-size: 17px; */
+    font-weight: 600;
+    color: white;
+    border: none;
+    background-color: #4162f6;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color 0.2s;
+}
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    color: #4162f6;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.result{
+    border-top: 1px solid white;
+    width: 85%;
+}
+.result div{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    flex-direction: row;
+    background-color: #4162f6;
+    color: white;
+    border-top: 1px solid white;
+}
+.result div div{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    flex-direction: row;
+    background-color: #4162f6;
+    color: white;
+    border-top: 1px solid white;
+}
+.result div:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #4162f6;
+}
+.result div button:hover{
+    cursor: pointer;
+}
+
+
+/* CSS for SuperHero Detailed Page */
+
