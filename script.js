@@ -11,6 +11,7 @@ let tempList = JSON.parse(response);
 let LIST = new Array();
 
 function getPresentOrnot(arr, value){
+	if(arr == null) return 0;
     for(let i = 0; i < arr.length; i++){
         if(arr[i].id == value)
           return 1; 
@@ -96,7 +97,7 @@ function displayList(){
                          bt.innerHTML = "Added";
                      }
                      else{
-                         bt.innerHTML = "Add";
+                         bt.innerHTML = "Adds";
                      }
                  
                 //  bt.innerHTML = suggested.id;
