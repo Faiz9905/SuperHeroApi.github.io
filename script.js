@@ -3,10 +3,13 @@ const search = document.getElementById('search');
 const resultBar = document.querySelector('.result');
 
 
+const tempList = [];
+
 let response = localStorage.getItem('list');
-let tempList = JSON.parse(response);
-if(tempList == null)
- console.log("Yes");
+console.log(response);
+if(response != null){
+    tempList = JSON.parse(response);
+}
 
 
 
