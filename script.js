@@ -1,7 +1,7 @@
 const btn = document.getElementById('btn');
 const search = document.getElementById('search');
 const resultBar = document.querySelector('.result');
-
+localStorage.setItem('list' , "");
 
 let response = localStorage.getItem('list');
 let tempList = JSON.parse(response);
