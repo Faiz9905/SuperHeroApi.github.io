@@ -3,7 +3,7 @@ const search = document.getElementById('search');
 const resultBar = document.querySelector('.result');
 
 
-const tempList = [];
+let tempList = [];
 
 let response = localStorage.getItem('list');
 console.log(response);
