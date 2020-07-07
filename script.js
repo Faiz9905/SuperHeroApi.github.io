@@ -97,7 +97,7 @@ function displayList(){
                          bt.innerHTML = "Added";
                      }
                      else{
-                         bt.innerHTML = "Adds";
+                         bt.innerHTML = "Add";
                      }
                  
                 //  bt.innerHTML = suggested.id;
