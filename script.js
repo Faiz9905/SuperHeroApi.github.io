@@ -6,15 +6,19 @@ const resultBar = document.querySelector('.result');
 let tempList = [];
 
 let response = localStorage.getItem('list');
-console.log(response);
+
+
+//If response is null
 if(response != null){
     tempList = JSON.parse(response);
 }
 
 
-
+// New array for creating Value if localstroge is empty
 let LIST = new Array();
 
+
+// To check Item is already present in localstorage or not
 function getPresentOrnot(arr, value){
    if(arr == null)
    return 0;
@@ -26,6 +30,8 @@ function getPresentOrnot(arr, value){
     return 0;
 }
 
+
+//Go to details Page
 function goToBio(value){
     localStorage.setItem('key', value)
     window.location.href = "superHeroDetails.html";
@@ -33,7 +39,7 @@ function goToBio(value){
 }
 
 
-
+//Add to Favorite List
 function addToFav(bt, value, name, trash, imageURL){
     
     
@@ -73,6 +79,8 @@ function addToFav(bt, value, name, trash, imageURL){
   
 //    console.log(LIST);
 }
+
+// MAIN FUNCTION
 function displayList(){
     var val = search.value;
     if(val === "") {
