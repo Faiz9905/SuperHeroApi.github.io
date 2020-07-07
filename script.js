@@ -1,6 +1,7 @@
 const btn = document.getElementById('btn');
 const search = document.getElementById('search');
 const resultBar = document.querySelector('.result');
+
 localStorage.setItem('list' , "");
 
 let response = localStorage.getItem('list');
@@ -38,16 +39,8 @@ function addToFav(bt, value, name, trash, imageURL){
     }
     else{
 
-
-        tempList.push({
-              'id' : value,
-              'name' : name,
-              'trash' : trash,
-              'url' : imageURL
-        });
-
-        bt.innerText = "Added";
-        LIST.push({
+        if(tempList == null){
+        	LIST.push({
                 'id' : value,
                 'name' : name,
                 'trash' : trash,
@@ -55,6 +48,20 @@ function addToFav(bt, value, name, trash, imageURL){
                 
         });
         localStorage.setItem('list' , JSON.stringify(tempList));
+        }
+
+        else{
+        	 tempList.push({
+              'id' : value,
+              'name' : name,
+              'trash' : trash,
+              'url' : imageURL
+        });
+        }
+       
+
+        bt.innerText = "Added";
+        
 
     }
   
