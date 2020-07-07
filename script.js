@@ -2,17 +2,19 @@ const btn = document.getElementById('btn');
 const search = document.getElementById('search');
 const resultBar = document.querySelector('.result');
 
-// localStorage.setItem('list' , "");
 
 let response = localStorage.getItem('list');
 let tempList = JSON.parse(response);
+if(tempList == null)
+ console.log("Yes");
 
 
 
 let LIST = new Array();
 
 function getPresentOrnot(arr, value){
-	if(arr == null) return 0;
+   if(arr == null)
+   return 0;
     for(let i = 0; i < arr.length; i++){
         if(arr[i].id == value)
           return 1; 
@@ -38,30 +40,31 @@ function addToFav(bt, value, name, trash, imageURL){
         alert("Already Added");
     }
     else{
-
+     
         if(tempList == null){
-        	LIST.push({
+            LIST.push({
                 'id' : value,
                 'name' : name,
                 'trash' : trash,
                 'url' : imageURL
                 
         });
-        localStorage.setItem('list' , JSON.stringify(tempList));
-        }
+        localStorage.setItem('list' , JSON.stringify(LIST));
 
-        else{
-        	 tempList.push({
-              'id' : value,
-              'name' : name,
-              'trash' : trash,
-              'url' : imageURL
-        });
         }
+   else{
+    tempList.push({
+        'id' : value,
+        'name' : name,
+        'trash' : trash,
+        'url' : imageURL
+  });
+  localStorage.setItem('list' , JSON.stringify(tempList));
+
+   }
        
-
         bt.innerText = "Added";
-        
+       
 
     }
   
@@ -97,7 +100,7 @@ function displayList(){
 
                  const bt = document.createElement("BUTTON");
                  bt.setAttribute('even', 'btn');
-
+                  
                  let res = getPresentOrnot(tempList, suggested.id);
                      console.log(res);
                      if(res == 1){
