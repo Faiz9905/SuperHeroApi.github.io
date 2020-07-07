@@ -17,14 +17,14 @@ body{
     display: flex;
     position: relative;
     top: 30;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     /* border: 1px solid red; */
     /* background-color: red; */
 }
 input{
-    width: 85%;
+    width: 90%;
     height: 40px;
    
     font-size: 20px;
@@ -67,7 +67,8 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 .result{
     border-top: 1px solid white;
-    width: 85%;
+    width: 90%;
+    /* border: 1px solid red; */
 }
 .result div{
     padding: 15px;
