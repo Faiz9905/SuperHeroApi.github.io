@@ -68,16 +68,20 @@ input:-moz-placeholder { /* Firefox 18- */
 .result{
     border-top: 1px solid white;
     width: 90%;
+    height: 700px;
+    overflow: scroll;
     /* border: 1px solid red; */
 }
 .result div{
     padding: 15px;
     display: flex;
+
     justify-content: space-between;
     font-size: 20px;
     flex-direction: row;
     background-color: #4162f6;
     color: white;
+
     border-top: 1px solid white;
 }
 .result div div{
